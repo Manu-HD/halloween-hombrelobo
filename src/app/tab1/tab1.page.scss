@@ -1,0 +1,71 @@
+.page-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #b6aeb2;
+  font-size: 9px;
+  letter-spacing: 0.19em;
+}
+
+.page-kicker > span:last-child {
+  color: #786e77;
+}
+
+.kicker-line {
+  width: 25px;
+  height: 1px;
+  background: #b71e36;
+  box-shadow: 0 0 12px #b71e3680;
+}
+
+.omen-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 21px 3px 4px;
+}
+
+.omen-quote {
+  margin: 0;
+  color: #ded5d2;
+  font:
+    italic 19px Georgia,
+    'Times New Roman',
+    serif;
+}
+
+.omen-signs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #9c9095;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.omen-signs span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.omen-signs i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c52a42;
+  box-shadow: 0 0 9px #bd1835;
+}
+
+@media (max-width: 720px) {
+  .omen-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .omen-signs {
+    gap: 11px;
+  }
+}

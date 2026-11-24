@@ -1,0 +1,99 @@
+<ion-header class="wolf-header">
+  <ion-toolbar>
+    <span slot="start" class="brand-mark" aria-hidden="true">
+      <ion-icon name="moon-outline"></ion-icon>
+    </span>
+    <ion-title>
+      <span class="brand-name">UMBRA</span>
+      <span class="brand-divider"> / </span>
+      <span class="brand-edition">CUADERNO DE CAMPO</span>
+    </ion-title>
+    <span slot="end" class="header-folio">EXPEDIENTE <strong>002</strong></span>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="wolf-content">
+  <main class="page-shell story-page">
+    <p class="page-kicker"><span class="kicker-line"></span> ORIGEN Y LEYENDA</p>
+
+    <section class="story-heading">
+      <div>
+        <p class="section-label">NO TODAS LAS HUELLAS SON HUMANAS</p>
+        <h1>Algo antiguo<br />despierta en el bosque.</h1>
+      </div>
+      <p class="story-intro">
+        El mito del hombre lobo cambia de nombre y de forma según quién lo cuenta. A veces es una maldición; otras, un
+        hambre que nadie consigue contener.
+      </p>
+    </section>
+
+    <section class="origin-card" aria-labelledby="origin-title">
+      <img src="assets/img/hl.jpg" alt="La silueta de un hombre lobo recortada contra la luna llena" loading="lazy" />
+      <div class="origin-copy">
+        <p class="chapter-label">I <span>—</span> LA TRANSFORMACIÓN</p>
+        <h2 id="origin-title">La luna lo reconoce.</h2>
+        <p>
+          En antiguas leyendas europeas, una persona podía convertirse en lobo por un hechizo, un castigo o una
+          maldición. La luna llena se hizo inseparable del mito con el paso del tiempo, aunque no aparece en todas sus
+          versiones.
+        </p>
+      </div>
+    </section>
+
+    <section class="traits-section" aria-labelledby="traits-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">NOTAS DEL INVESTIGADOR</p>
+          <h2 id="traits-title">Lo que acecha en la oscuridad</h2>
+        </div>
+        <p class="section-hint">Abre una ficha para leer el apunte completo.</p>
+      </div>
+
+      <div class="trait-grid">
+        <div class="trait-item">
+          <lib-monster-card
+            eyebrow="VENTAJA · LOS SENTIDOS"
+            image="assets/img/hl1.jpg"
+            imageAlt="Ilustración de un licántropo mostrando los colmillos"
+            title="Siempre encuentra el rastro."
+            text="Olfato, oído y visión nocturna: en el bosque, nada consigue esconderse."
+            buttonLabel="LEER APUNTE"
+            (action)="revealDetail('senses')"
+          ></lib-monster-card>
+          @if (selectedDetail === 'senses') {
+          <p class="field-note">
+            <span>ARCHIVO 01</span> Corre contra el viento: si él te huele primero, no tendrás tiempo de huir.
+          </p>
+          }
+        </div>
+
+        <div class="trait-item">
+          <lib-monster-card
+            eyebrow="DEBILIDAD · LA PLATA"
+            image="assets/img/hl2.jpg"
+            imageAlt="Ilustración frontal de un hombre lobo de ojos rojos"
+            title="Hasta la bestia sangra."
+            text="La plata aparece en muchas versiones como la herida que puede detener la maldición."
+            buttonLabel="LEER APUNTE"
+            tone="silver"
+            (action)="revealDetail('silver')"
+          ></lib-monster-card>
+          @if (selectedDetail === 'silver') {
+          <p class="field-note">
+            <span>ARCHIVO 02</span> No todas las leyendas coinciden: algunas dicen que la única cura es sobrevivir hasta
+            el amanecer.
+          </p>
+          }
+        </div>
+      </div>
+    </section>
+
+    <aside class="whisper">
+      <ion-icon name="sparkles-outline" aria-hidden="true"></ion-icon>
+      <p>
+        <span>ÚLTIMO AVISO</span>
+        Si encuentras huellas que empiezan en la espesura y terminan junto a tu puerta, no abras.
+      </p>
+    </aside>
+  </main>
+</ion-content>

@@ -1,0 +1,165 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.monster-card {
+  position: relative;
+  display: flex;
+  min-height: 470px;
+  height: 100%;
+  align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(190, 50, 70, 0.35);
+  border-radius: 18px;
+  background: #0e0d12;
+}
+
+.monster-card__image {
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 0 auto;
+  width: 73%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: saturate(0.82) contrast(1.18) brightness(0.83);
+  transition: transform 450ms ease;
+}
+
+.monster-card:hover .monster-card__image {
+  transform: scale(1.035);
+}
+
+.monster-card__veil {
+  position: absolute;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #09080d 0%, rgba(9, 8, 13, 0.97) 30%, rgba(9, 8, 13, 0.46) 59%, rgba(9, 8, 13, 0.04) 100%),
+    radial-gradient(ellipse at 76% 34%, rgba(105, 13, 35, 0.38), transparent 55%);
+  inset: 0;
+  pointer-events: none;
+}
+
+.monster-card__content {
+  width: min(64%, 570px);
+  padding: clamp(25px, 4.7vw, 55px);
+}
+
+.monster-card__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 20px;
+  color: #cc7882;
+  font-size: 8px;
+  letter-spacing: 0.19em;
+}
+
+.monster-card__eyebrow span {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #ad1f3a;
+  box-shadow: 0 0 10px #bd1d3d;
+}
+
+.monster-card__content h2 {
+  margin: 0;
+  color: #f0e6e5;
+  font:
+    400 clamp(38px, 5.5vw, 70px) / 0.98 Georgia,
+    'Times New Roman',
+    serif;
+  letter-spacing: -0.045em;
+}
+
+.monster-card__text {
+  max-width: 390px;
+  margin: 17px 0 22px;
+  color: #c3b8bb;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.monster-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #983246;
+  background: transparent;
+  color: #e7d4d7;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  transition:
+    color 180ms ease,
+    gap 180ms ease;
+}
+
+.monster-card__action:hover {
+  gap: 23px;
+  color: #fff;
+}
+
+.monster-card__action:focus-visible {
+  outline: 2px solid #b34156;
+  outline-offset: 5px;
+}
+
+.monster-card__action span {
+  color: #d05b6c;
+  font-size: 15px;
+}
+
+.monster-card--silver .monster-card__eyebrow,
+.monster-card--silver .monster-card__action span {
+  color: #c7c0c6;
+}
+
+.monster-card--silver .monster-card__eyebrow span {
+  background: #b5adb7;
+  box-shadow: 0 0 10px rgba(201, 191, 205, 0.55);
+}
+
+.monster-card--silver .monster-card__action {
+  border-bottom-color: #77707e;
+}
+
+@media (max-width: 680px) {
+  .monster-card {
+    min-height: 440px;
+  }
+
+  .monster-card__image {
+    width: 100%;
+    height: 74%;
+    object-position: center 35%;
+  }
+
+  .monster-card__veil {
+    background: linear-gradient(180deg, rgba(8, 7, 11, 0.02) 0%, rgba(8, 7, 11, 0.42) 36%, #09080d 72%);
+  }
+
+  .monster-card__content {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .monster-card__content h2 {
+    font-size: clamp(37px, 10vw, 55px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .monster-card__image,
+  .monster-card__action {
+    transition: none;
+  }
+}

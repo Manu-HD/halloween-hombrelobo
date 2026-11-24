@@ -1,0 +1,13 @@
+<article class="monster-card" [class.monster-card--silver]="tone === 'silver'">
+  <img class="monster-card__image" [src]="image" [alt]="imageAlt" />
+  <div class="monster-card__veil"></div>
+  <div class="monster-card__content">
+    <p class="monster-card__eyebrow"><span></span>{{ eyebrow }}</p>
+    <h2>{{ title }}</h2>
+    <p class="monster-card__text">{{ text }}</p>
+    <button class="monster-card__action" type="button" (click)="action.emit()">
+      {{ buttonLabel }}
+      <span aria-hidden="true">↗</span>
+    </button>
+  </div>
+</article>

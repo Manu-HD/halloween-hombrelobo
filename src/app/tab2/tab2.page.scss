@@ -1,0 +1,199 @@
+ion-content {
+  --background: radial-gradient(ellipse at 82% 11%, rgba(86, 12, 31, 0.15), transparent 38%), #07070b;
+  --color: #f0e9e9;
+}
+
+.page-kicker,
+.section-label,
+.chapter-label {
+  color: #c5aeb4;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.page-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 27px;
+}
+
+.kicker-line {
+  width: 24px;
+  height: 1px;
+  background: #ae2139;
+}
+
+.story-heading,
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 28px;
+}
+
+.story-heading {
+  margin-bottom: 32px;
+}
+
+.section-label {
+  margin: 0 0 12px;
+  color: #b52a43;
+}
+
+.story-heading h1,
+.section-heading h2 {
+  margin: 0;
+  font:
+    400 clamp(36px, 5vw, 58px) / 0.98 Georgia,
+    'Times New Roman',
+    serif;
+  letter-spacing: -0.035em;
+}
+
+.story-intro,
+.section-hint {
+  max-width: 390px;
+  margin: 0 0 3px;
+  color: #b5adb2;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.origin-card {
+  display: grid;
+  min-height: 290px;
+  grid-template-columns: 0.9fr 1.1fr;
+  overflow: hidden;
+  border: 1px solid #39222a;
+  border-radius: 17px;
+  background: #0e0d12;
+}
+
+.origin-card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 290px;
+  object-fit: cover;
+  object-position: center 36%;
+}
+
+.origin-copy {
+  align-self: center;
+  padding: clamp(24px, 4vw, 47px);
+}
+
+.chapter-label {
+  color: #d3b8bd;
+}
+
+.chapter-label span {
+  color: #9c3447;
+}
+
+.origin-copy h2 {
+  margin: 17px 0 12px;
+  font:
+    400 clamp(28px, 3.2vw, 39px) / 1 Georgia,
+    'Times New Roman',
+    serif;
+}
+
+.origin-copy > p:last-child {
+  max-width: 510px;
+  margin: 0;
+  color: #b6adb2;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.traits-section {
+  padding-top: 45px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  font-size: clamp(29px, 4vw, 42px);
+}
+
+.section-hint {
+  font-size: 11px;
+}
+
+.trait-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.trait-item {
+  min-width: 0;
+}
+
+.field-note {
+  margin: 10px 3px 0;
+  color: #c2b5b9;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.field-note span,
+.whisper p span {
+  display: block;
+  margin-bottom: 5px;
+  color: #bd3149;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+}
+
+.whisper {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 16px 19px;
+  border-left: 1px solid #832036;
+  background: linear-gradient(90deg, rgba(90, 12, 29, 0.15), transparent);
+}
+
+.whisper ion-icon {
+  color: #c54558;
+  font-size: 18px;
+}
+
+.whisper p {
+  margin: 0;
+  color: #c0b4b8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 720px) {
+  .story-heading,
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .origin-card {
+    grid-template-columns: 1fr;
+  }
+
+  .origin-card > img {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .origin-copy {
+    padding: 25px;
+  }
+
+  .trait-grid {
+    grid-template-columns: 1fr;
+  }
+}

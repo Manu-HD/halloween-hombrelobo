@@ -1,0 +1,27 @@
+ion-tabs {
+  --ion-background-color: #07070b;
+}
+
+.wolf-tab-bar {
+  --background: rgba(8, 7, 11, 0.98);
+  --border: 1px solid rgba(151, 34, 53, 0.34);
+  --color: #82777e;
+  --color-selected: #d04a5d;
+  height: 66px;
+  padding: 5px 16px calc(5px + env(safe-area-inset-bottom));
+  backdrop-filter: blur(14px);
+}
+
+.wolf-tab-bar ion-tab-button {
+  --color: #82777e;
+  --color-selected: #d04a5d;
+  --ripple-color: rgba(208, 74, 93, 0.2);
+  max-width: 180px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.wolf-tab-bar ion-icon {
+  margin-bottom: 3px;
+  font-size: 20px;
+}

@@ -1,0 +1,39 @@
+<ion-header class="wolf-header">
+  <ion-toolbar>
+    <span slot="start" class="brand-mark" aria-hidden="true">
+      <ion-icon name="moon-outline"></ion-icon>
+    </span>
+    <ion-title>
+      <span class="brand-name">UMBRA</span>
+      <span class="brand-divider"> / </span>
+      <span class="brand-edition">ARCHIVO DE CRIATURAS</span>
+    </ion-title>
+    <span slot="end" class="header-folio">EXPEDIENTE <strong>001</strong></span>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="wolf-content">
+  <main class="page-shell home-page">
+    <p class="page-kicker"><span class="kicker-line"></span> CRIATURA 01 <span>— NOCTURNA</span></p>
+
+    <lib-monster-card
+      class="home-hero"
+      eyebrow="SI OYES SU AULLIDO, YA TE HA ENCONTRADO"
+      image="assets/img/hl3.jpg"
+      imageAlt="Primer plano de un hombre lobo de ojos rojos y fauces abiertas"
+      title="Hombre lobo"
+      text="A la luz de la luna, la frontera entre hombre y bestia desaparece. Sigue las huellas… si te atreves."
+      buttonLabel="ENTRAR EN LA LEYENDA"
+      (action)="openStory()"
+    ></lib-monster-card>
+
+    <section class="omen-strip" aria-label="Señales del hombre lobo">
+      <p class="omen-quote">«La noche no está vacía. Está esperando.»</p>
+      <div class="omen-signs">
+        <span><i></i> LUNA LLENA</span>
+        <span><i></i> BOSQUE CERRADO</span>
+        <span><i></i> NINGÚN TESTIGO</span>
+      </div>
+    </section>
+  </main>
+</ion-content>

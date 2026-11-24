@@ -1,0 +1,142 @@
+.page-kicker,
+.section-label {
+  color: #c5aeb4;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.page-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 27px;
+}
+
+.kicker-line {
+  width: 24px;
+  height: 1px;
+  background: #ae2139;
+}
+
+.gallery-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 26px;
+  margin-bottom: 30px;
+}
+
+.section-label {
+  margin: 0 0 12px;
+  color: #b52a43;
+}
+
+.gallery-heading h1 {
+  margin: 0;
+  font:
+    400 clamp(40px, 6vw, 68px) / 0.96 Georgia,
+    'Times New Roman',
+    serif;
+  letter-spacing: -0.04em;
+}
+
+.gallery-heading > p {
+  max-width: 320px;
+  margin: 0 0 5px;
+  color: #b5adb2;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-auto-rows: 210px;
+  gap: 13px;
+}
+
+.evidence {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #39222a;
+  border-radius: 13px;
+  background: #100d13;
+}
+
+.evidence--wide {
+  grid-column: span 2;
+}
+
+.evidence--portrait {
+  grid-row: span 2;
+}
+
+.evidence img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.82) contrast(1.13) brightness(0.78);
+  transition:
+    filter 220ms ease,
+    transform 350ms ease;
+}
+
+.evidence:hover img {
+  filter: saturate(0.95) contrast(1.12) brightness(0.98);
+  transform: scale(1.035);
+}
+
+.evidence::after {
+  position: absolute;
+  background: linear-gradient(180deg, transparent 48%, rgba(5, 5, 9, 0.9));
+  content: '';
+  inset: 0;
+  pointer-events: none;
+}
+
+.evidence figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  bottom: 14px;
+  left: 15px;
+  color: #e8dfe0;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+.evidence figcaption span {
+  margin-right: 8px;
+  color: #db4358;
+}
+
+.gallery-warning {
+  margin: 23px 0 0;
+  color: #a14c59;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 190px;
+  }
+
+  .evidence--wide {
+    grid-column: span 2;
+  }
+
+  .evidence--portrait {
+    grid-row: span 1;
+  }
+}
